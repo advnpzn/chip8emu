@@ -1,0 +1,31 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AccessModifierOffset: -4
+
+# Braces
+BreakBeforeBraces: Attach
+
+# Includes
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+
+# Alignment
+AlignConsecutiveDeclarations: false
+AlignConsecutiveAssignments: false
+
+# Pointers and references
+PointerAlignment: Left
+
+# Constructor initializers
+BreakConstructorInitializers: BeforeColon
+PackConstructorInitializers: Never
+
+# Namespaces
+CompactNamespaces: false
+NamespaceIndentation: None
+
+# C++ specific
+Standard: Latest
