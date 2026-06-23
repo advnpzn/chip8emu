@@ -26,3 +26,17 @@ target_include_directories(chip8emu PRIVATE ${CMAKE_SOURCE_DIR}/include)
 add_subdirectory(${CMAKE_SOURCE_DIR}/renderer/sdl3)
 
 target_link_libraries(chip8emu PRIVATE chip8emu_renderer_sdl3)
+
+
+find_program(CLANG_FORMAT clang-format)
+if(CLANG_FORMAT)
+    file(GLOB_RECURSE ALL_SOURCE_FILES
+        ${CMAKE_SOURCE_DIR}/src/*.cpp
+        ${CMAKE_SOURCE_DIR}/include/*.hpp
+        ${CMAKE_SOURCE_DIR}/renderer/*.cpp
+    )
+    add_custom_target(format
+        COMMAND ${CLANG_FORMAT} -i ${ALL_SOURCE_FILES}
+        COMMENT "Formatting source files..."
+    )
+endif()
