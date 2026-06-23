@@ -30,8 +30,6 @@ sudo apt-get install build-essential git make \
     libusb-1.0-0-dev libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
 ```
 
-> SDL3 is fetched automatically via CMake FetchContent — no manual SDL install needed.
-
 ## Building
 
 ```bash
